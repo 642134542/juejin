@@ -13,13 +13,13 @@ export function getBrochure(params) {
 }
 
 /**
- * 关联案件
+ * 获取掘金的文章
  * @param params
  * @returns {AxiosPromise}
  */
-export function relationFileToCase(params) {
+export function getGoldList(params) {
   return service({
-    url: '/fsga/sw/jfs-ws/glaj',
+    url: 'resources/gold',
     method: 'post',
     data: params,
   });
