@@ -12,23 +12,29 @@
                 :value="item.label">
         </el-option>
       </el-select>
-      <div class="fr search-select">
-        <span>热度</span>
-        <el-divider direction="vertical"></el-divider>
-        <span>最新</span>
-      </div>
     </div>
+    <github-container></github-container>
   </div>
 </template>
 
 <script>
-import {defineComponent, ref} from "vue";
+import {defineComponent, reactive, ref, toRefs} from "vue";
+import githubContainer from './githubContainer.vue';
 
 export default defineComponent({
   name: 'blogList',
-  components: { },
+  components: { githubContainer },
   setup() {
+    const data = reactive({
+      articalList: [], // 列表
+      searchSelectType: 'heat', // 查询方式
+    });
+    const handleChangeType = (type) => {
+      data.searchSelectType = type;
+    };
     return {
+      ...toRefs(data),
+      handleChangeType,
       selectType: ref(''),
       searchTypeList: [{ label: 'Android' }, { label: '前端' }, { label: '产品' },
         { label: '设计'}, { label: 'iOS' }, { label: '后端' }],

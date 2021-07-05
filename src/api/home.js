@@ -24,3 +24,27 @@ export function getGoldList(params) {
     data: params,
   });
 }
+
+/**
+ * 获取github的文章
+ * @param params
+ */
+export function getGithubList(params) {
+  return service({
+    url: 'resources/github',
+    method: 'post',
+    data: params,
+  });
+}
+
+/**
+ * 获取沸点
+ * @param params
+ */
+export function getPinsList(params) {
+  return service({
+    url: 'resources/pins',
+    method: 'post',
+    data: params,
+  });
+}

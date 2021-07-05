@@ -3,7 +3,7 @@
     <el-input
             placeholder="请输入关键字"
             v-model="keyword"
-            class="input-with-select">
+            class="input-with-select" size="small">
       <template #prepend>
         <el-select v-model="select" placeholder="请选择">
           <el-option label="餐厅名" value="1"></el-option>

@@ -44,13 +44,13 @@
     </el-header>
     <el-main class="home-main">
       <el-container class="home-body-container">
-        <el-aside width="450px">
+        <el-aside width="400px">
           <jue-jin-list></jue-jin-list>
         </el-aside>
         <el-main>
           <blog-list></blog-list>
         </el-main>
-        <el-aside width="450px">
+        <el-aside width="335px">
           <boiling-point-list></boiling-point-list>
         </el-aside>
       </el-container>
